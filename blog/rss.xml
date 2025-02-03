@@ -17,5 +17,14 @@
             <content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet...</p>
 <p>...consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content:encoded>
         </item>
+        <item>
+            <title><![CDATA[Second Blog Post]]></title>
+            <link>https://berkercelik.github.io/b-log/blog/helloworld2</link>
+            <guid>https://berkercelik.github.io/b-log/blog/helloworld2</guid>
+            <pubDate>Mon, 03 Feb 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Lorem ipsum dolor sit amet...]]></description>
+            <content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet...</p>
+<p>...consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content:encoded>
+        </item>
     </channel>
 </rss>

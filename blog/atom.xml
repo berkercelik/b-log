@@ -20,4 +20,17 @@
             <uri>https://github.com/berkercelik</uri>
         </author>
     </entry>
+    <entry>
+        <title type="html"><![CDATA[Second Blog Post]]></title>
+        <id>https://berkercelik.github.io/b-log/blog/helloworld2</id>
+        <link href="https://berkercelik.github.io/b-log/blog/helloworld2"/>
+        <updated>2025-02-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Lorem ipsum dolor sit amet...]]></summary>
+        <content type="html"><![CDATA[<p>Lorem ipsum dolor sit amet...</p>
+<p>...consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content>
+        <author>
+            <name>Berk Ali Erçelik</name>
+            <uri>https://github.com/berkercelik</uri>
+        </author>
+    </entry>
 </feed>
