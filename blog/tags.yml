@@ -1,0 +1,14 @@
+webdev:
+  label: Web Geliştirme
+  permalink: /webgelistirme
+  description: Web Geliştirme
+
+web3:
+  label: Web3
+  permalink: /web3
+  description: Web3
+
+siber:
+  label: Siber Güvenlik
+  permalink: /siberguvenlik
+  description: Siber Güvenlik
