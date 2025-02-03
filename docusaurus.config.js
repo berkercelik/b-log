@@ -25,6 +25,8 @@ const config = {
   organizationName: 'berkercelik', // Usually your GitHub org/user name.
   projectName: 'b-log', // Usually your repo name.
 
+  trailingSlash: false,
+  
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
