@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://berkercelik.github.io/b-log/blog</id>
+    <title>b_log Blog</title>
+    <updated>2025-02-03T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://berkercelik.github.io/b-log/blog"/>
+    <subtitle>b_log Blog</subtitle>
+    <icon>https://berkercelik.github.io/b-log/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[First Blog Post]]></title>
+        <id>https://berkercelik.github.io/b-log/blog/helloworld</id>
+        <link href="https://berkercelik.github.io/b-log/blog/helloworld"/>
+        <updated>2025-02-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Lorem ipsum dolor sit amet...]]></summary>
+        <content type="html"><![CDATA[<p>Lorem ipsum dolor sit amet...</p>
+<p>...consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content>
+        <author>
+            <name>Berk Ali Erçelik</name>
+            <uri>https://github.com/berkercelik</uri>
+        </author>
+    </entry>
+</feed>
