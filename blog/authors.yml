@@ -2,7 +2,7 @@ berkercelik:
   name: Berk Ali Erçelik
   title: Cyber Security & Full Stack Web Dev
   url: https://github.com/berkercelik
-  image_url: http://localhost:3000/b-log/img/githubimg.png
+  image_url: http://localhost:3000/img/githubimg.png
   page: true
   socials:
     github: berkercelik
