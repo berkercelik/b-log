@@ -49,3 +49,38 @@
   --ifm-color-primary-lightest: #3f80f1;
   --ifm-background-color: #101218;
 }
+
+.navbar,
+.navbar-sidebar__brand {
+  background-image: url('/img/bg.png');
+  background-size: cover;
+  background-color: #000;
+  box-shadow: 0 0 10px #0006;
+}
+
+.navbar__logo img {
+  filter: drop-shadow(1px 1px 2px #0003);
+}
+
+.navbar__inner,
+.navbar__inner a,
+.navbar__inner a:hover,
+.navbar-sidebar__brand,
+.navbar-sidebar__brand a,
+.navbar-sidebar__brand a:hover {
+  color: #fff;
+}
+
+.navbar__inner .navbar__item {
+  transition: background var(--ifm-transition-fast);
+  border-radius: var(--ifm-global-radius);
+  margin: 0 .1rem;
+  padding: var(--ifm-navbar-item-padding-vertical) calc(var(--ifm-navbar-item-padding-horizontal) - .1rem);
+}
+
+.navbar__inner .navbar__item:hover,
+.navbar__inner .clean-btn:hover,
+.navbar-sidebar__brand .clean-btn:hover,
+.navbar__inner .dropdown__link:hover {
+  background-color: #fff3;
+}
