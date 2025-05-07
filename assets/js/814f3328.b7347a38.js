@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkb_log=self.webpackChunkb_log||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"EDR (Endpoint Detection and Response) Nedir? ve EDR Nas\u0131l \xc7al\u0131\u015f\u0131r?","permalink":"/b-log/blog/edr-nedir-ve-edr-nasil-calisir","unlisted":false,"date":"2025-05-08T00:00:00.000Z"}]}')}}]);
