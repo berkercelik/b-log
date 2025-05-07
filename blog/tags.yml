@@ -1,14 +1,24 @@
 webdev:
   label: Web Geliştirme
   permalink: /webgelistirme
-  description: Web Geliştirme
+  description: Frontend, backend ve modern web teknolojileri üzerine içerikler
 
 web3:
   label: Web3
   permalink: /web3
-  description: Web3
+  description: Blockchain, akıllı kontratlar ve merkeziyetsiz uygulamalar
 
-siber:
+siberguvenlik:
   label: Siber Güvenlik
   permalink: /siberguvenlik
-  description: Siber Güvenlik
+  description: Güvenlik açıkları, sızma testleri ve savunma teknikleri
+
+sistem:
+  label: Sistem
+  permalink: /sistem
+  description: Donanım, işletim sistemleri ve temel sistem yönetimi konuları
+
+sysadmin:
+  label: Sistem Yönetimi
+  permalink: /sistemyonetimi
+  description: Sistem yöneticiliği, sunucu yapılandırma ve yönetimi konuları
