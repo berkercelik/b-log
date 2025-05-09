@@ -14,6 +14,8 @@ Bu örnek SIEM senaryosunda Windows Server 2019 (Versiyon 1809) ve Ubuntu 22.04.
 
 ![](media/image1.png)
 
+![](media/image30.png)
+
 Windows Server IP: 192.168.28.129
 
 Ubuntu IP: 192.168.28.131\
