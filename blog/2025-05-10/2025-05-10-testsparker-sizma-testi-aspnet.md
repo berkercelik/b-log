@@ -5,16 +5,15 @@ authors: [berkercelik]
 tags: [siberguvenlik]
 ---
 
-
 # Testsparker Sızma Testi & Zaafiyet Analizi Raporu
 
 ## Özet
 
-Bu sızma testi, http://aspnet.testsparker.com/ adresinde barındırılan web uygulamasının güvenlik durumunu değerlendirmek amacıyla gerçekleştirilmiştir. Test sonucunda, Stored Cross-Site Scripting (XSS), Error-Based SQL Injection, hassas bilgi ifşası ve veri tabanı dosyası ifşası gibi kritik güvenlik açıkları tespit edilmiştir. Bu rapor, bulguların detaylı analizini, olası etkilerini ve bu riskleri azaltmak için alınabilecek önlemleri sunmayı amaçlamaktadır.
+Bu sızma testi, http://aspnet.testsparker.com/ adresinde barındırılan web uygulamasının güvenlik durumunu değerlendirmek amacıyla gerçekleştirilmiştir. Test sonucunda, Stored Cross-Site Scripting (XSS), Error-Based SQL Injection, hassas bilgi ifşası ve veri tabanı dosyası ifşası gibi kritik güvenlik açıkları tespit edilmiştir. Bu rapor, bulguların detaylı analizini, olası etkilerini ve bu riskleri azaltmak için alınabilecek önlemleri sunmayı amaçlamaktadır. <!-- truncate -->
 
 Test, OWASP rehberleri ve manuel test teknikleri dahil olmak üzere manuel araçlar ve metodolojiler kullanılarak gerçekleştirilmiştir. Rapor, teknik ve yönetimsel kitlelere hitap edecek şekilde yapılandırılmış olup, güvenlik açıkları ciddiyet derecelerine göre önceliklendirilmiştir.
 
-### **Bu sızma testi sırasında zaman ve kapsam sınırlamaları nedeniyle derinlemesine analiz yapamasam da, sistemdeki potansiyel giriş noktalarını başarıyla tespit ettim ve olası saldırı yüzeylerine dair genel bir farkındalık kazandım.**
+**🛡️Bu sızma testi sırasında zaman ve kapsam sınırlamaları nedeniyle derinlemesine analiz yapamasam da, sistemdeki potansiyel giriş noktalarını başarıyla tespit ettim ve olası saldırı yüzeylerine dair genel bir farkındalık kazandım.**
 
 ---
 
