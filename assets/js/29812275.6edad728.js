@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkb_log=self.webpackChunkb_log||[]).push([[509],{9307:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/b-log/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":3,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
