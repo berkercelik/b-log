@@ -14,7 +14,7 @@ Az önce belirttiğim şekilde ikinci el olarak araştırdığımda bu cihaza de
 
 TX3 Mini Donanımı: 2GB RAM, S905W 4 Çekirdek işlemci, 1x Ethernet Portu (RJ45), Güç girişi (5W 2A Adaptör), AV, HDMI Portu, SD Kart girişi, birkaç işime yaramayan giriş daha, USB portları ve yanında gelen kumanda. 
 
-![](tx3mini.png)
+![](media/tx3mini.png)
 
 **Diğer cihazların aksine AV Portu içerisine gizlenmiş bir reset tuşu veya herhangi bir reset tuşu bulunmuyor. Cihazı alırken bunu da göz ardı etmeyin. Veya uyguladığım yöntemle kullanabilirsiniz. Cihazı reset sonrası boot edeceğimiz için önemli.**
 
@@ -45,7 +45,7 @@ Minimum 8 GB olmak şartıyla kullanacağınız kartın boyutu tamamen opsiyonel
 Bu adımda balenaEtcher adlı yazılımı kullanacağız. Rufus da kullanabilirsiniz. Kartınızın yazma korumasının kapalı olduğuna emin olun.
 "https://etcher.balena.io/" adresinden indirebilirsiniz. Her işletim sistemini destekliyor. Teorik olarak USB ile de aynı işlemi yapabilirsiniz fakat her cihaz USB'yi boot edilebilir şekilde algılamıyor ve USB girişi uzun süre üzerinde okuma yazma yapılırsa ısınmaya sebep olabiliyor. Bu yüzden SD Kart üzerinden sistemi ayağa kaldırmanızı tavsiye ederim. Bu yazılım çok basit bir arayüze sahip. Önce yazdırmak istediğimiz imajı seçip ardından ilgili diski seçiyoruz. Eğer imajı ".xz .gz" gibi bir halde indirdiyseniz ve hata alıyorsanız 7-Zip ile imajı dosyaya çıkarıp tekrar deneyebilirsiniz. Yüklendikten sonra Verify kısmını bekleminizi tavsiye ederim. İşletim sistemlerinde dosya bütünlüğü kurulum aşamasında hata çıkmaması için önemlidir.
 
-![](image.png)
+![](media/image.png)
 
 Kurulum tamamlandıktan sonra Windows "biçimlendirmeniz gerekiyor" uyarısı verebilir, önemli değil. Kartı çıkarıp tekrar takın. 
 
@@ -84,16 +84,16 @@ Konsola `reboot update` yazdım ve enter'a bastım.
 
 Cihaz SD kart üzerinden yeniden başladı. Eğer dosyaları doğru yapılandırdıysanız doğrudan Armbian Linux komut satırı ekrana gelmeli.
 
-![](image-1.png)
-![](image-2.png)
+![](media/image-1.png)
+![](media/image-2.png)
 
 İlk çalıştırmada kullanıcı adı, şifre, kablosuz internet kullanımı, dil ve klavye dizilimi belirleme gibi sorular soruyor. Bu adımda Türkçe (tr_TR.UTF-8) için 305 yazıp devam edebilirsiniz. Kablosuz sorusuna "n" diyerek hayır cevabı verdim çünkü cihazı kablo ile modeme bağlayarak kullanacağım. Kurulum adımları tamamlandığında yeniden başlayabilir. Daha sonra giriş bilgilerini girdiğiniz karşınıza Armbian'ın karşılama ekranı çıkacak.
 
-![](image-3.png)
+![](media/image-3.png)
 
 Bu aşamadan sonra cihazın kendi depolama kısmına Armbian'ı kalıcı olarak yüklemeke isterseniz "install-aml.sh" ile devam edebilirsiniz fakat ben cihazı brick etme ihtimaline karşı şimdilik sadece SD kart üzerinden çalıştararak devam edeceğim. Çünkü cihazı geriye döndürmek için satıcı firma tarafından mevcut bir dağıtımı yok. 
 
-![](image-4.png)
+![](media/image-4.png)
 
 ## Tekrar Android'e Geçmek & Cihazı Kapatmak & Yeniden Başlatmak
 
@@ -314,7 +314,7 @@ aml_thermal:  +50.0°C
 
 > `apt install neofetch` veya git clone ile indirip kurulum yaptıktan sonra
 
-![](image-6.png)
+![](media/image-6.png)
 
 ### Diğer Opsiyonel Yapılandırmalar
 
