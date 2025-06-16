@@ -4,7 +4,7 @@ Herkese selamlar. Bu rehberde Amlogic S905W işlemcili sıradan bir Android Box'
 
 ## Android Box'ların İşlemcilerinin Uyumluluğu Hakkında
 
-Piyasada sıfır veya ikinci el olarak satılan çok fazla marka, model Android Box var. Allwinner H616, H618 veya H313 serisi işlemciler, Rockchip RK3588, RK3568, RK3528, RK3328 işlemciler, Amlogic S9xxx, S905, S904, S903, S912 gibi çok fazla işlemci mevcut. Güncel Orange Pi Zero 3 cihazını örnek alırsak bu tarz yeni nesil cihazlarda H618 4 çekirdekli işlemciler kullanılıyor. Birkaç benchmark sitesini referans aldığımda performans olarak aralarında pek fark yok olarak gözüküyor. Zaten TDP değerleri doğrudan açıklanmasa da totalde en yüksek 10-15W kullanabilen cihazlar. Armbian web sitesinde topluluk olabildiğince her chipset için destek vermeye, o chipsete özel kernel build etmeye çalışıyor. 
+Piyasada sıfır veya ikinci el olarak satılan çok fazla marka, model Android Box var. Allwinner H616, H618 veya H313 serisi işlemciler, Rockchip RK3588, RK3568, RK3528, RK3328 işlemciler, Amlogic S9xxx, S905, S904, S903, S912 gibi çok fazla işlemci mevcut. Güncel Orange Pi Zero 3 cihazını örnek alırsak bu tarz yeni nesil cihazlarda H618 4 çekirdekli işlemciler kullanılıyor. Birkaç benchmark sitesini referans aldığımda <!-- truncate --> performans olarak aralarında pek fark yok olarak gözüküyor. Zaten TDP değerleri doğrudan açıklanmasa da totalde en yüksek 10-15W kullanabilen cihazlar. Armbian web sitesinde topluluk olabildiğince her chipset için destek vermeye, o chipsete özel kernel build etmeye çalışıyor. 
 
 **Eğer bu projeyi yapacaksanız önce alacağınız cihazın işlemcisinin desteğinin olup olmadığını araştırmanız gerekli. Alternatif olarak [CoreELEC](https://coreelec.org/) işletim sistemini de araştırabilirsiniz.**
 
