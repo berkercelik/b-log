@@ -389,6 +389,6 @@ Sızma testi, dikkat edilmediği takdirde ciddi sonuçlara yol açabilecek birde
   - Login sayfasında: `' OR '1'='1`, `1; DROP TABLE users --` (başarısız)
 - **Cookie Çalma Denemesi**: Azure sunucusu (`http://4.xxx.xxx.171:8000`) üzerinde Python HTTP sunucusu ile document.cookie çalma (başarısız)
 
-### 8.3 İletişim Bilgileri
+### 8.2 İletişim Bilgileri
 
 Daha fazla ayrıntı ve iletişim için: [Berk Ali Erçelik](https://github.com/berkercelik)
