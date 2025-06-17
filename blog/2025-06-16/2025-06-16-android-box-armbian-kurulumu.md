@@ -1,6 +1,15 @@
+---
+slug: android-box-armbian-kurulumu
+title: Android Box'a Armbian Linux İşletim Sistemi Yüklemek
+authors: [berkercelik]
+tags: [sistem, sysadmin]
+---
+
 # Android Box'a Armbian Linux İşletim Sistemi Yüklemek
 
-Herkese selamlar. Bu rehberde Amlogic S905W işlemcili sıradan bir Android Box'ı nasıl Raspberry Pi, Orange Pi'a çevireceğiz bunu anlatacağım. Bu fikir hem bütçe ve verimlilik hem de hobi amaçlı olarak çıktı ve o şekilde ilerledi. Yazının sonunda neler yükelenebileceğini yazacağım. Neden ihtiyaç olduğu hakkında daha detaylı bir yazı gerekli. Veya deneyim kazanmak için 
+## Giriş
+
+Herkese selamlar. Bu rehberde Amlogic S905W işlemcili sıradan bir Android Box'ı nasıl Raspberry Pi veya Orange Pi'a çevireceğiz bunu anlatacağım. Bu fikir hem bütçe ve verimlilik hem de hobi amaçlı olarak çıktı ve o şekilde ilerledi. Yazının sonunda neler kurulabileceğini ve çalıştırılabileceğini yazacağım. Neden günümüzde bir ihtiyaç olduğu kişiden kişiye değişebilir, hakkında daha detaylı bir yazı gerekli. Veya deneyim kazanmak için uygulayabilirsiniz.
 
 ## Android Box'ların İşlemcilerinin Uyumluluğu Hakkında
 
@@ -105,7 +114,7 @@ Bu aşamadan sonra cihazın kendi depolama kısmına Armbian'ı kalıcı olarak 
 
 ## SSH ile Bağlanma & İlk Yapılandırmalar
 
-Cihazı modeme bağladıktan sonra "ip a" komutuyla IP alıp almadığını kontrol ediyoruz. Genelde "eth0" adındaki arayüz ile fiziksel etherneet portu çalışır. İnternete bağlandıktan sonra "apt update && apt upgrade" ile güncellemeleri yapıyoruz. SSH servisi genelde yüklü ve açık gelir. "ss -tuln" komutuyla açık portları listeliyoruz.
+Cihazı modeme bağladıktan sonra "ip a" komutuyla IP alıp almadığını kontrol ediyoruz. Genelde "eth0" adındaki arayüz ile fiziksel ethernet portu çalışır. İnternete bağlandıktan sonra "apt update && apt upgrade" ile güncellemeleri yapıyoruz. SSH servisi genelde yüklü ve açık gelir. "ss -tuln" komutuyla açık portları listeliyoruz.
 
 `tcp LISTEN 0 4096 *:22 *:* `
 
@@ -214,7 +223,7 @@ sudo mkswap /swapfile
 
 ```
 [Unit]
-Description=Disable Swap on boot (Swap alanını açılışta kapatmak)
+Description=Disable Swap on boot (Swap alanını açılışta kapat)
 After=multi-user.target
 
 [Service]
@@ -324,7 +333,7 @@ aml_thermal:  +50.0°C
 - SSH portunu değiştirme
 - UFW güvenlik duvarı yapılandırması
 - Root girişi devre dışı bırakma
-- CPU frekans ölçeklemesi (`cpufrequtils` veya `cpupower-gui` ile)
+- CPU frekans ölçeklemesi (`cpufrequtils` veya `cpupower` ile)
 - Tailscale kurulumu ile uzaktan erişim
 
 ## Sonuç ve Kullanım Senaryoları
