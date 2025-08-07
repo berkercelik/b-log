@@ -20,7 +20,7 @@ Telekom Security tarafından geliştirilen, Docker tabanlı ve açık kaynaklı 
 | [T-Pot Github Repo](https://github.com/telekom-security/tpotce)
 
 
-<img src="media/image-1.png" width="300"> 
+![ ](media/image1.png)
 
 
 ### Neden bu projeyi kurdum?
