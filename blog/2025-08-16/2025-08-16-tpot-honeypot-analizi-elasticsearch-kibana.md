@@ -117,7 +117,7 @@ Kısaca, hızlı filtreleme ve keşif için KQL, raporlama ve derin analiz için
 
 Öncelikle bu projede çok fazla veri birikiyor. Tüm veriler bir yana makineleri ayrı ayrı analiz etmek çok zaman alan bir süreç. Çok fazla veri olduğu için bir miktar yavaş çalışma bazen gözlenebilir. İlk başta gelen Dashboard'ı komple değiştirebilirsiniz. Yeni görsel paneller ekleyebilirsiniz. İstediğiniz sorgulara bağlı bu paneller görselleştirme yaparak kolay anlaşılabilirlik sağlar. 
 
-#### Filtre Uygulama
+### Filtre Uygulama
 
 Tarih aralığı seçimi yapabiliriz, Dashboard düzenini değiştirebiliriz, herhangi bir grafiğin sağ üstte beliren menüsünden "Inspect" kısmından istediğimiz veriyi "+" butonu ile filtreleyebiliriz. Bu sayede sadece filtreyi kapsayan ve filreyle ilgili veriler görünür hale gelir.
 
@@ -128,7 +128,7 @@ Tarih aralığı seçimi yapabiliriz, Dashboard düzenini değiştirebiliriz, he
 Bu filtreler çok daha spesifik olabilir. Örneğin parola denemesinde "123456" kullanılan loglar ekrana gelir.
 ![](media/image-18.png)
 
-#### Menüler
+### Menüler
 
 Elasticsearch içerisinde çok detaylı menü ve başlıklar var. Burada bizi en çok ilgilendiren temel başlıklar Analytics altında Dashboards ve Discover, Security sekmesi altında Dashboards, Management altında Stack Management olarak tanımlanabilir. Diğer kısımlardan da Elasticsearch'ün sağladığı işlevleri uygulayabilirsiniz.
 
@@ -142,7 +142,7 @@ Management > Kibana > Saved Objects kısmından daha önceden oluşturulmuş Kib
 
 ![](media/image-21.png)
 
-#### Kayıtları (Log) Dışa Aktarma
+### Kayıtları (Log) Dışa Aktarma
 
 Örnek olarak Analytics > Discover sayfasına gelelim. Hiç bir filtre uygulamadığımız zaman 6,6 milyon log olduğu sorgulanıyor. 
 
@@ -161,7 +161,7 @@ Bunu dışa aktarmak için sağ üstteki Share > Export butonuna bastıktan sonr
 
 Daha detaylı analizler için eğer erişim varsa direkt Elasticsearch API ile veriler de çekilebilir. Her istekte sınır 10 bindir. Bazı araçlarla parça parça büyük bir log indirilebilir.
 
-#### Örnek Log İncelemesi
+### Örnek Log İncelemesi
 
 ![](media/image-26.png)
 
@@ -177,7 +177,7 @@ Aynı şekilde Discover sayfasından istediğimiz filtreyi uygulayarak; örnek `
 
 4. Dördüncü Log: Bir önceki maddeyi destekler şekilde, yine "Yönetici Ayrıcalıkları Kazanma Girişimi" ve IoT hedefli olduğuna dair başka bir kural daha bu paketi tehlikeli olarak işaretlemiştir.
 
-#### API ve Konsol Kullanımı
+### API ve Konsol Kullanımı
 
 Discover > Inspect> View:Request sekmesinden > Open in Console veya herhangi bir grafiğin Inspect butonundan sonra View:Requests olarak seçiyoruz. Burada Request (İstek) ve Response (Dönüt) sekmelerini görüntüleyebiliriz.
 
