@@ -11,6 +11,8 @@ tags: [siberguvenlik, sysadmin]
 
 Bir önceki bölümde T-Pot Honeypot kurulumundan ve ilk gözlemlerimizden söz etmiştim. Bu bölümde ise yaklaşık 8 gün boyunca açık kalan T-Pot Honeypot’un ürettiği verileri ayrıntılı şekilde ele alacağız. Öncelikle kullanılan teknolojilere değinecek, ardından Elasticsearch ve Kibana ile veri inceleme sürecine dair bir rehber sunacağım. Sonrasında genel analiz sonuçlarını paylaşarak, her bir senaryo makinesini ayrı başlıklar altında detaylı biçimde değerlendireceğiz. Bölümün sonunda ise Suricata İmzaları ve CVE'ler üzerinden ek bir inceleme yaparak, projeyi kapsamlı bir değerlendirme ile tamamlayacağız.
 
+<!-- truncate -->
+
 ## Önceki Bölümden 
 
 ### Honeypot nedir?
@@ -445,7 +447,7 @@ Redis Honeypot'u, internete açık ve genellikle parola koruması olmayan Redis 
 | MODULE UNLOAD system             | 93    |
 
 
-#### Senaryo 6 - ConPot
+### Senaryo 6 - ConPot
 
 Conpot, özellikle endüstriyel kontrol sistemleri (ICS / SCADA) için geliştirilmiş bir honeypot’tur. Amacı saldırganların SCADA / endüstriyel protokollere (ör. Modbus, Siemens S7, BACnet, SNMP) yönelik saldırılarını yakalamaktır. Gerçek bir PLC (Programmable Logic Controller) ya da endüstriyel bir cihazı taklit eder.
 
@@ -454,7 +456,7 @@ Conpot, özellikle endüstriyel kontrol sistemleri (ICS / SCADA) için geliştir
 Saldırganların denediği bazı girdiler
 ![](media/image-40.png)
 
-#### Diğer Senaryolar
+### Diğer Senaryolar
 
 * CiscoASA: Cisco'nun yaygın olarak kullanılan ASA serisi güvenlik duvarlarını ve VPN servislerini taklit ederek bu cihazlardaki zafiyetleri sömürmeye çalışan saldırganları yakalar.
 * H0neytr4p (Port 443): HTTPS portu (443) üzerinde çalışarak web sunucularına yönelik yapılan GET ve POST gibi genel tarama ve sızma girişimlerini yakalayan bir honeypot'tur.
