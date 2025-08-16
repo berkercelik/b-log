@@ -424,7 +424,7 @@ Tanner, bir web sunucusunu taklit ederek HTTP (Port 80) tabanlı saldırıları,
 
 
 
-#### Senaryo 5 - Redishoneypot
+### Senaryo 5 - Redishoneypot
 
 Redis Honeypot'u, internete açık ve genellikle parola koruması olmayan Redis (in-memory key-value) veritabanlarını hedef alan saldırıları yakalamaktadır. 6379 numaralı port varsayılan port numarasıdır. Gözlemlenen komutlar, asıl amacın veri çalmaktan daha çok sunucuda uzaktan kod çalıştırmak (Remote Code Execution - RCE) olduğunu anlatıyor. `info server` ile bilgi toplama ve `FLUSHDB` ile veritabanını temizleme, çalıştırılabilir bir kütüphane dosyası gibi `exp.so` olarak dosya kaydetme ve çalıştırma denemeleri, ardından temizleme işlemleri gözlemleniyor. 
 
