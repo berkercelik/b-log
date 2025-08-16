@@ -19,9 +19,9 @@ Telekom Security tarafından geliştirilen, Docker tabanlı ve açık kaynaklı 
 
 | [T-Pot Github Repo](https://github.com/telekom-security/tpotce)
 
-
 ![ ](media/image1.png)
 
+<!-- truncate -->
 
 ### Neden bu projeyi kurdum?
   - Gerçek dünyadan gelen saldırı verilerini toplamak.
