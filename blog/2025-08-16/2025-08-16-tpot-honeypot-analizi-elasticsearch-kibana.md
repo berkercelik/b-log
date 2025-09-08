@@ -2,7 +2,7 @@
 slug: tpot-honeypot-analizi-elasticsearch-kibana
 title: Honeypot Projesi - Kapsamlı T-Pot Honeypot Veri Analizi ve Elasticsearch & Kibana Rehberi - Bölüm 2
 authors: [berkercelik]
-tags: [siberguvenlik, sysadmin]
+tags: [siberguvenlik, sysadmin, sistem]
 ---
 
 # Honeypot Projesi - Kapsamlı T-Pot Honeypot Veri Analizi ve Elasticsearch & Kibana Rehberi - Bölüm 2
@@ -516,7 +516,7 @@ En çok kaydedilen CVE'ler (Common Vulnerabilities and Exposures)
 | CVE-2024-3721 |	3
 | CVE-2024-44000  |	3
 
-Listede sonlara doğru yer alsa da güncel sayılabilecek bir çok CVE mevcut.
+Listede sonlara doğru yer alsa da güncel sayılabilecek birçok CVE mevcut.
 
 * CVE-2025-30208: Vite'da (web geliştirme aracı) bulunan ve sunucudaki hassas dosyaların okunmasına olanak tanıyan bir dosya okuma zafiyetidir.
 
